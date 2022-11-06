@@ -1,13 +1,10 @@
 Classes	    Atributos       Constructor      Métodos         Visibilidad  Report	Final
                            y argumentos	   y argumentos	   	
  20%	     20%	     10%	     30%	       10%        10%	   100%			
-2	2	1	3	1	0,9	9,9 +0,5 por el método adicional
+2	2	1	3	1	0,9	9,9 +0,5 por el método adicional  nota final 10,4
 
 Recordar poner los nombres de los integrantes del grupo en el report. La primera parte del report 
 se han añadido imagenes pero con poca explicación. en la simulación, el método de evitar colisión 
 en algunas veces genera  que el programa no funcione adecuadamente, porque se van juntando los agentes 
 y no se separan.  Fuera de ahí la ejecución del programa es correcto. Se añade medio punto por la 
 implementación del método adicional.
-
-Se entrego fuera de plazo. Factor de penalización 0,9
-Nota final 10,4 *0,9 =  9,36
