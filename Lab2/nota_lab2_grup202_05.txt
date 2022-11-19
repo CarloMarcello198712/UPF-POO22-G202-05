@@ -1,0 +1,34 @@
+1) Implementar correctamente el código de lectura y creación de cursos, aulas, alumnos y profesores: 3pt
+2) Implementar correctamente el código de lectura y creación de conferencias, tareas e inscripciones: 3pt
+3) Vincular correctamente conferencias (con Curso/Aula), tareas (con Curso/Profesor) e inscripciones (con Curso/Estudiante): 1pt 
+4) Implementar correctamente dos consultas (por ejemplo, CoursesOfStudent y TeachersOfCourse): 2pt	
+5) Report 1pto	
+6) Final
+7) Factor de penalización por no compilar penaliza la calificación de "código" con un factor de 0,4, y no ejecutar penaliza con un factor de 0,7. Un 1 significa que no hubo penalización.
+8) Queries adicionales hasta 1 punto máximo.
+9) Nota final
+
+1       2        3       4       5       6      7     8        9
+3	3	1	2	0,7	9,7	1	0,2	9,9
+
+En el report falta nombre de los integrantes. En el report mencionan "y por otro lado tenemos las clases que son de tipo asociación como Enrollment, Assignment y Lecture." esto es incorrecto, estas clases no son del tio asociación, sino son clases asociadas (asociación de clases), falta detallar los métodos implementados por vosotros para realizar las query y no solo como se han leido los ficheros. 
+Las query adicionales no funcionan correctamente, se han modificado a los siguientes datos
+System.out.println("Courses of a classroom: " + university.coursesOfClassroom("12.101"));
+
+        System.out.println("Classroom of teacher for an especific time slot: " + university.classroomOfTeacher("Severus Snape", 18));
+        
+        System.out.println("Classroom of student for an especific time slot: " + university.classroomOfStudent("Penelope Clearwater", 18));
+
+        System.out.println("Teacher of a classroom for an especific time slot: " + university.teacherOfClassroom("11.100", 18));
+
+        System.out.println("Student of a classroom for an especific time slot: " + university.studentOfClassroom("11.101", 18));
+
+y el resultado fue
+Courses of a classroom: [Transformations, Transformations, Black Magic Defense, Black Magic Defense, Enchantments, Enchantments, Potions, Potions, Astronomy, Astronomy, Flight, 
+Flight]
+Classroom of teacher for an especific time slot: The teacher doesn't have class at this time slot
+Classroom of student for an especific time slot: The student doesn't have class at this time slot
+Teacher of a classroom for an especific time slot: Teacher not found
+Student of a classroom for an especific time slot: Student not found
+
+Como se puede ver en la primera query se duplica la información, el resto de query si que regresan datos y el programa dice que no hay información. 
