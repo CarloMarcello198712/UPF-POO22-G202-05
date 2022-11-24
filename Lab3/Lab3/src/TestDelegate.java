@@ -117,6 +117,7 @@ public class TestDelegate {
 
             for(int i = 2; i < array.length; i++){
                 City c = Utility.getObject(array[i], this.cities);
+                c.addHQ(h); //The city added to the headquarter has this headquarter as atribute too
                 h.addCity(c);
             }
 
@@ -172,6 +173,7 @@ public class TestDelegate {
             for(int j = 0; j < 5; j++){
                 Regular r = new Regular("Member"+i+j, 977126300+(i*10)+j, "member"+i+j+"@ayuditas.cool",delegate.getHeadquarter(),delegate);
                 delegate.addDependents(r);
+                delegate.getHeadquarter().addMember(r); //Adding member to the headquarer too
 
                 QRLib q = new QRLib();
                 delegate.genRegularQR(q);

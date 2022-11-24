@@ -33,8 +33,8 @@ public class Delegate extends Member {
 
 
     public Image genDelegateQR(QRLib q){
-        Image image = new Image("QrDelegateDataBase/QrDelegate for "+this.getName()+".png",15,15);
-        BitMatrix qr = QRLib.generateQRCodeImage("This is a QR for a Delegate Member. You don’t have to care about rising sea levels, if you live on a mega yatch."+this.getName(), 15, 15);
+        Image image = new Image("QrDelegateDataBase/QrDelegate for "+this.getName()+".png",100,100);
+        BitMatrix qr = QRLib.generateQRCodeImage("This is a QR for a Delegate Member. You don’t have to care about rising sea levels, if you live on a mega yatch."+this.getName(), 100, 100);
         image.setBitMatrix(qr);
         image.save();
         return image;
@@ -42,8 +42,8 @@ public class Delegate extends Member {
     }
 
     public Image genRegularQR(QRLib q){
-        Image image = new Image("QrRegularDataBase/QrRegular for "+this.getName()+" department.png",15,15);
-        BitMatrix qr = QRLib.generateQRCodeImage("This is a QR for a Regular Member. Climate change doesn’t matter, if you stay indoors."+this.getName(), 15, 15);
+        Image image = new Image("QrRegularDataBase/QrRegular for "+this.getName()+" department.png",100,100);
+        BitMatrix qr = QRLib.generateQRCodeImage("This is a QR for a Regular Member. Climate change doesn’t matter, if you stay indoors."+this.getName(), 100, 100);
         image.setBitMatrix(qr);
         image.save();
         return image;
@@ -68,13 +68,17 @@ public class Delegate extends Member {
     
 
     public void proposeAction(Action a){
-        InfoAction actionDetails = new InfoAction(a, headOf, this.dependents.size(), 0, false);
-        this.headOf.addAction(actionDetails);
+        InfoAction actionDetails = new InfoAction(a, headOf, 0, 0, false);
+        this.getHeadquarter().addActionParticipated(actionDetails);
+
+        a.addDevelopedAction(actionDetails);
+        this.getHeadquarter().getOrganization().addAction(a);        
     }
 
     public void signUpAction(LocalDateTime d){
         Action action = this.headOf.getOrganization().getAction(d);
-        InfoAction i_a = new InfoAction(action, headOf, this.dependents.size(), 0, false);
-        this.headOf.addAction(i_a);
+        InfoAction i_a = new InfoAction(action, headOf, 0, 0, false);
+        this.headOf.getOrganization().getAction(d).addDevelopedAction(i_a);
+        this.headOf.addActionParticipated(i_a);
     }
 }

@@ -22,5 +22,9 @@ public class InfoAction {
         return this.action;
     }
 
+    public String toString(){
+        return this.headquarter.toString();
+    }
+
     
 }

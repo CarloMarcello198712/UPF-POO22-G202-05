@@ -59,7 +59,12 @@ public class Organization {
         for(Action a: this.actions){
             System.out.print("Purpose: "+a.getPurpose()+"\n");
             System.out.print("Start: "+a.getStart()+"\n");
-            System.out.print("Duration: "+a.getDuration()+"\n");
+            System.out.print("Duration: "+a.getDuration()+" hours\n");
+            System.out.print("Headquarters: \n");
+            for (InfoAction iA: a.getdevelopedAction()){
+                System.out.print("  "+iA.toString()+"\n");;
+            }
+
             System.out.print("\n");
         }
     }

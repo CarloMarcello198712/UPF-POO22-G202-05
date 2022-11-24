@@ -36,6 +36,10 @@ public class Action{
     public int getDuration(){
         return this.duration;
     }
+
+    public LinkedList<InfoAction> getdevelopedAction(){
+        return this.developedAction;
+    }
     
     public void addDevelopedAction(InfoAction dA){
         this.developedAction.add(dA);

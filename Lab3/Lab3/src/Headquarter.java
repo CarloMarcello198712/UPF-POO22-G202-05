@@ -40,9 +40,8 @@ public class Headquarter {
         return this.head;
     }
 
-    public void addAction(InfoAction a){
+    public void addActionParticipated(InfoAction a){
         this.actionsParticipated.add(a);
-        this.organization.addAction(a.getAction());
     }
 
     public Action getAction(LocalDateTime d){
