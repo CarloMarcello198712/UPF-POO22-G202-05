@@ -1,0 +1,14 @@
+1) Implementar correctamente el código para las clases: 2pt 
+2) Leer y crear regiones/sede/sede correctamente: 2pt 
+3) Vincular correctamente la sede y los head con el diseño restante (según el diagrama de clases): 2pt 
+4) Implementar correctamente los métodos genXQR y signUpX (X = Delegado/Regular): 2pt 
+5) Probando correctamente el código en un método principal: 1pt 
+6) Reporte 1pt.
+7) Nota final
+
+1    2      3      4      5     6      7
+2	1,5	2	2	1	1	10,5
+
+El report es correcto.
+Se crean más linkedlist de las solicitadas, recordar que todala información tendría que guardarse en las listas de headquarter y solo crear las listas de región, organización y head en testdelegate.
+Se añade el punto por la implementación de los eventos.
