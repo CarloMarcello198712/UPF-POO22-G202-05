@@ -1,0 +1,22 @@
+1) Clases Vector y Matrix: 2p 
+2) Métodos adicionales (set3D, create3DRotationZ, matrixMultiply): 2p
+3) Búfer de audio: 1p
+4) Marco, BWFrame, ColorFrame: 3p
+5) Método principal de prueba: 1p
+6) Reporte 1pt.
+7) Nota final
+
+1    2      3      4      5     6      7
+2	2	1	2	0,1	1	8,1
+
+
+El report es correcto.
+En el cambio de brillo  y de color no se contempla que los valores se encuentren entre 0 y 255 como se solicita. Solo se contempla el 255 en el cambio de brillo.
+Falta comprobar toda la parte del funcionamiento de vector y matriz, así como el cambio de valores de los frame y audiobuffer sin necesidad de la parte gráfica.
+
+
+
+
+
+
+
