@@ -1,0 +1,12 @@
+Interfaces Nameable and Comparable 2p	
+Class Entity: 3p (should inherit from interfaces, declare abstract method update)	
+Class Agent: 3p (relatively straightforward translation of Java code)	
+Main method for testing: 2p	
+Final
+20%	30%	30%	20%	100%
+2	3	2,5	2	9,5
+
+Clase Comparable y nameable correcto
+Clase Entity correcto.
+Clase Agent porqué se creo un atributo directión como un Vec2D(0,0) en lugar de un Vec2D *dir. En los métodos targetReached y isColliding se debería de llamar al método substract de Vec2D en lugar de hacer la resta en el método.
+Programa princpal correcto.
